@@ -1,0 +1,56 @@
+<section class="topSide">
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="logo">
+      <img src="assets/logo20.png" width="150px">
+    </div>
+    <nav>
+      <ul id="MenuItens">
+        <li><a href="">EMPRESA</a></li>
+        <li><a href="">PRODUTOS</a></li>
+        <li><a href="">CONTATOS</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- SLIDER -->
+  <div class="slider">
+    <div class="slider-content">
+      <!-- Container dos slides -->
+      <div class="slides-container" [style.transform]="'translateX(-' + (currentSlide * 100) + '%)'" (touchstart)="onTouchStart($event)"
+     (touchend)="onTouchEnd($event)">
+        <div class="slide-box" *ngFor="let image of images; let i = index">
+          <img class="img-desktop" [src]="image.src" [alt]="image.alt" (error)="onImageError($event)">
+        </div>
+      </div>
+
+      <!-- Navegação manual -->
+      <div class="nav-manual">
+        <label *ngFor="let btn of images; let i = index"
+               class="manual-btn"
+               [class.active]="currentSlide === i"
+               (click)="goToSlide(i)"></label>
+      </div>
+
+      <!-- Botões de navegação (opcional) -->
+      <button class="nav-btn nav-prev" (click)="previousSlide()" [disabled]="currentSlide === 0">
+        &#8249;
+      </button>
+      <button class="nav-btn nav-next" (click)="nextSlide()" [disabled]="currentSlide === images.length - 1">
+        &#8250;
+      </button>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+

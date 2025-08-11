@@ -1,0 +1,25 @@
+.quem-somos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: auto;
+    margin: 0 auto;
+}
+
+.quem-somos h1 {
+
+    text-transform: uppercase;
+    font-size: 50px;
+    background: linear-gradient(90deg, #FFF100 0%, #EC1C24 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: -3px;
+
+}
+
+.quem-somos p {
+    font-size: 20px;
+    font-weight: 500;
+    width: 75%;
+}

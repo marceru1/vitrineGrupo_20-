@@ -1,0 +1,101 @@
+.custom-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.logo-img {
+    height: 60px; /* aumente aqui conforme o tamanho desejado */
+    max-width: 100%;
+}
+.upload-form {
+  display: flex;
+  flex-direction: column; /* <<< ESSA É A MUDANÇA PRINCIPAL */
+  align-items: flex-start; /* Alinha os itens à esquerda (opcional) */
+  gap: 15px;               /* Aumenta o espaço vertical entre os itens */
+  margin-top: 20px;
+
+  /* Mantém a borda e o padding que adicionamos antes */
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Estilo do botão (sem alterações) */
+.upload-button {
+    font-weight: 600;
+    padding: 10px 20px;
+    background-color:#7A7F84;
+    color: #EDEDED;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+/* Container principal da galeria */
+.photo-gallery-container {
+    width: 100%;
+    max-width: 1140px; /* Similar ao .container do Bootstrap */
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Grid que segura os cards */
+.photo-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 24px; /* Espaçamento entre os cards */
+    justify-content: center;
+}
+
+/* Item individual do grid */
+.photo-gallery-item {
+    display: flex;
+}
+
+/* O card da foto */
+.photo-card {
+    border: 1px solid #dee2e6;
+    border-radius: 0.375rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Imagem do card */
+.photo-card-img {
+    width: 100%; /* Mantém a largura em 100% do card */
+    height: 300px; /* <<-- MODIFIQUE ESTE VALOR para a altura desejada */
+    object-fit: cover; /* Essencial: redimensiona a imagem para cobrir a área sem distorcer. */
+    display: block; /* Remove pequenos espaços que podem aparecer abaixo da imagem */
+    border-top-left-radius: calc(0.375rem - 1px);
+    border-top-right-radius: calc(0.375rem - 1px);
+}
+
+/* Corpo do card */
+.photo-card-body {
+    flex: 1 1 auto; /* Permite que o corpo cresça e ocupe o espaço */
+    padding: 1.25rem;
+}
+
+.photo-card-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.photo-card-text {
+    margin-bottom: 1rem;
+    color: #6c757d;
+}
+
+/* Rodapé do card */
+.photo-card-footer {
+    padding: 0.75rem 1.25rem;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-top: 1px solid #dee2e6;
+    text-align: right; /* Alinha os botões à direita */
+}
